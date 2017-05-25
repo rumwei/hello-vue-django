@@ -2,8 +2,10 @@
 
 This is a boilerplate project for using vuejs with Django.
 
-### Features
+### 中文详细教程
+[Django + Vue 单页面应用的开发环境搭建步骤](http://www.jianshu.com/p/fe74907e16b9)
 
+### Features
 * Django backend in `./backend`
 * vuejs (v2) frontend in `./frontend`
 * Hot-reload with vue-loader
