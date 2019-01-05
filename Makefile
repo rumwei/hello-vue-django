@@ -3,13 +3,13 @@ export DJANGO_SETTINGS_MODULE=backend.settingsdev
 
 # Initializes virtual environment with basic requirements.
 prod:
-	pip install -r requirements.txt
+	python -m pip install -r requirements.txt
 	npm install --production
 
 # Installs development requirements.
 dev:
-	pip install -r requirements.txt
-	pip install -r requirements-dev.txt
+	python -m pip install -r requirements.txt
+	python -m pip install -r requirements-dev.txt
 	npm install
 
 # Runs development server.
