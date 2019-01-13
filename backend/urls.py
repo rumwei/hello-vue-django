@@ -21,7 +21,8 @@ import backend.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', backend.views.index)
+    url(r'^$', backend.views.index),
+    url(r'^test/', backend.views.test),
 ]
 
 if settings.DEBUG:
