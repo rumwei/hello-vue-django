@@ -3,7 +3,7 @@ import os
 import datetime
 import sys
 
-path_exec = os.getcwd()
+path_exec = os.getcwd()  # 项目根目录hello-vue-django
 
 
 def index(request):
