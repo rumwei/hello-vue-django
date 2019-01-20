@@ -4,23 +4,23 @@ var BundleTracker = require('webpack-bundle-tracker');
 
 // Directory for deployed assets. It should be within our static files path.
 // Backslash at the end is not required.
-var dist_dir = '/static/dist';
+var distDir = '/static/dist';
 // Controls use of hot-reload devserver. When this is used you must also run `node server.js`
-var use_hot_reload = process.env.NODE_ENV !== 'production';
+var useHotReload = process.env.NODE_ENV !== 'production';
 // Dev server address specified in server.js
-var dev_server_addr = 'localhost';
+var devServerAddr = 'localhost';
 // Dev server port specified in server.js
-var dev_server_port = 8001;
+var devServerPort = 8001;
 
 module.exports = {
     entry: ['./frontend/main.js'],
     output: {
-        path: path.resolve(__dirname, '.' + dist_dir + '/'),
+        path: path.resolve(__dirname, '.' + distDir + '/'),
         filename: '[name]-[hash].js',
-        publicPath: dist_dir + '/',
+        publicPath: distDir + '/'
     },
     plugins: [
-        new BundleTracker({filename: './webpack-stats.json'}),
+        new BundleTracker({filename: './webpack-stats.json'})
     ],
     module: {
         rules: [
@@ -67,8 +67,7 @@ module.exports = {
     devtool: '#eval-source-map'
 };
 
-if (process.env.NODE_ENV === 'production')
-{
+if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map'
     // http://vue-loader.vuejs.org/en/workflow/production.html
     module.exports.plugins = (module.exports.plugins || []).concat([
@@ -87,12 +86,10 @@ if (process.env.NODE_ENV === 'production')
             minimize: true
         })
     ])
-}
-else if (use_hot_reload)
-{
-    module.exports.entry.push('webpack-dev-server/client?http://' + dev_server_addr + ':' + dev_server_port);
+} else if (useHotReload) {
+    module.exports.entry.push('webpack-dev-server/client?http://' + devServerAddr + ':' + devServerPort);
     module.exports.entry.push('webpack/hot/only-dev-server');
-    module.exports.output['publicPath'] = 'http://' + dev_server_addr + ':' + dev_server_port + dist_dir + '/';
+    module.exports.output['publicPath'] = 'http://' + devServerAddr + ':' + devServerPort + distDir + '/';
     module.exports.plugins.push(new webpack.HotModuleReplacementPlugin());
     module.exports.plugins.push(new webpack.NoEmitOnErrorsPlugin()); // don't reload if there is an error
 }

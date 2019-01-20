@@ -45,3 +45,7 @@ def rm_backup(rm_path, nums):
     else:
         for i in range(len(all_path_ctime_list) - nums):
             os.remove(all_path_ctime_list[i][0])
+
+
+def back_front_smooth(request):
+    return render(request,"ckEditor.html")

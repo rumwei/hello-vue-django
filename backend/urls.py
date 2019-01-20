@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', backend.views.index),
     url(r'^test/', backend.views.test),
+    url(r'back_front_smooth/', backend.views.back_front_smooth),
 ]
 
 if settings.DEBUG:
