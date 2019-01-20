@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-balloon": "^11.2.0",
     "vue": "^2.1.0"
   },
   "devDependencies": {
