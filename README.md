@@ -41,8 +41,8 @@ You probably want to create python virtual environment as well. Default python i
 
 
 
-###Project Process Record
-20190120
-next target：集成CKEditor富文本编辑器
-go on：完成了CKEditor模块都安装，即npm install --save @ckeditor/ckeditor5-build-balloon
-后续进行CKEditor都使用
+### Project Process Record
+* 20190120
+    * next target：集成CKEditor富文本编辑器
+    * go on：完成了CKEditor模块都安装，即npm install --save @ckeditor/ckeditor5-build-balloon
+    * 后续进行CKEditor的使用摸索，完成在ckEditor.vue中构建出富文本编辑器
